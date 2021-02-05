@@ -176,7 +176,7 @@ int find(char *from, char *anywhere,struct time time){
     int find_pos=0;
     while(find_pos<no_bus){
             printf("\nin while ");
-            if((!strcmp(bus[find_pos].start_location,from))&&((bus->stime.hour>time.hour)&&(bus->stime.hour<time.hour+1))||!(bus[find_pos].skip))
+            if((!strcmp(bus[find_pos].start_location,from))&&((bus->stime.hour>time.hour)||(bus->stime.hour<time.hour+1))&&!(bus[find_pos].skip))
            { printf("\nfound ");
             strcpy(anywhere,bus[find_pos].end_location);
             printf("\n%s",anywhere);
