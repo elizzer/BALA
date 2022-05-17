@@ -7,6 +7,7 @@ struct time{
 int hour;
 int min;
 int sec;
+int a;
 };
 
 struct bus{
